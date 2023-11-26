@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+   <!--Questions-->
+
+   <div class="questions">
+    Q1. What country has the highest life expectancy? <br>
+    <input type="radio" name="question1" id="correct1">Hong Kong<br>
+    <input type="radio" name="question1">Paris<br>
+    <input type="radio" name="question1">South Africa<br>
+    <input type="radio" name="question1">China<br><br>
+
+    Q2. Where would you be if you were standing on the Spanish Steps?<br>
+    <input type="radio" name="question2">Mountain<br>
+    <input type="radio" name="question2">Canada<br>
+    <input type="radio" name="question2" id="correct2">Rome<br>
+    <input type="radio" name="question2">Plane<br><br>
+
+    Q3.What is the most common surname in the United States?<br>
+    <input type="radio" name="question3">Johnson<br>
+    <input type="radio" name="question3" id="correct3">Smith<br>
+    <input type="radio" name="question3">Mahomed<br>
+    <input type="radio" name="question3">Phill<br><br>
+
+    Q4.What artist has the most streams on Spotify?<br>
+    <input type="radio" name="question4">Rihanna<br>
+    <input type="radio" name="question4" id="correct4"> Drake<br>
+    <input type="radio" name="question4">Beyonce<br>
+    <input type="radio" name="question4">R.Kelly<br><br>
+
+    Q5.How many minutes are in a full week?<br>
+    <input type="radio" name="question5">15,445<br>
+    <input type="radio" name="question5" id="correct5">10,080<br>
+    <input type="radio" name="question5">11,888<br>
+    <input type="radio" name="question5">19,450<br><br>
+
+    <input type="submit" name="submit" value="submitQuiz" onclick="result()">
+
+</div> 
+    <script type="text/javascript">
+        function result() {
+            
+            var score=0;
+            if (document.getElementById('correct1').checked) {
+                score++;
+            }
+            if (document.getElementById('correct2').checked) {
+                score++;
+            }
+            if (document.getElementById('correct3').checked) {
+                score++;
+            }
+
+            if (document.getElementById('correct4').checked) {
+                score++;
+            }
+
+            if (document.getElementById('correct5').checked) {
+                score++;
+            }
+            document.write("Your score is:" +score);
+        }
+    </script>
+    
+</body>
+</html>
